@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
 
 <head>
@@ -49,7 +48,7 @@
       <!-- Right Side of Card -->
       <div class="sides right-side">
         <h1 class="profession">Birthday</h1>
-        <h3 class="name">Rajeshwari</h3>
+        <h3 class="name"></h3>
       </div>
 
       <!-- Back Side of Card -->
@@ -75,7 +74,7 @@
     </div>
 
     <!-- Audio Element with Autoplay and Loop -->
-    <audio id="hbdmp" autoplay loop>
+    <audio id="hbdmp" autoplay loop muted>
       <source src="./hbd.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
@@ -88,11 +87,13 @@
       $('.lording').hide();
     }, 5000);
 
-    // Show content and play audio
+    // Show content and play audio after 5.2 seconds
     setTimeout(function () {
       $('#container').show();
-      // Play the audio
-      document.getElementById('hbdmp').play();
+      // Unmute and play the audio
+      var audio = document.getElementById('hbdmp');
+      audio.muted = false; // Unmute the audio
+      audio.play(); // Play the audio
     }, 5199);
   </script>
 
